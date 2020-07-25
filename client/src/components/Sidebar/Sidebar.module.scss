@@ -1,0 +1,18 @@
+.sidebar {
+  box-sizing: border-box;
+  padding: 10px 15px;
+  width: 500px;
+  height: calc(100vh - 80px);
+  overflow: scroll;
+  border-left: 1px solid #000;
+  transition: width 200ms linear;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  &.open {
+    width: 500px;
+  }
+}

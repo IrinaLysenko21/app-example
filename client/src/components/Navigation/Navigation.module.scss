@@ -1,0 +1,23 @@
+.nav {
+  display: flex;
+  list-style: none;
+
+  &__item {
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    transition: 200ms;
+
+    &:hover {
+      color: #67d69f;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 0 15px;
+}
+
+.page {
+  display: flex;
+
+  &__contentWrap {
+    width: 100%;
+    height: calc(100vh - 80px);
+    overflow: scroll;
+    transition: width 200ms linear;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+
+    &.open {
+      width: 500px;
+    }
+  }
+
+  &__innerContentWrap {
+    display: flex;
+  }
+
+  &__content {
+    padding-right: 60px;
+    width: 100%;
+  }
+
+  &__text {
+    margin: 0;
+  }
+
+  &__btn {
+    position: sticky;
+    top: 15px;
+    right: 15px;
+    min-width: 40px;
+    height: 40px;
+    background-color: #67d69f;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+}

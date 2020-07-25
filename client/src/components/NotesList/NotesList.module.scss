@@ -1,0 +1,79 @@
+.notesList {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 20px 20px 0;
+    padding: 10px;
+    width: calc(50% - 10px);
+    color: rgb(224, 221, 221);
+    background-color: #383838;
+    border-radius: 8px;
+    border: 1px solid #67d69f;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &_small {
+      margin: 0 0 20px;
+      width: 100%;
+    }
+  }
+}
+
+.note {
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__priority {
+    display: block;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #282828;
+    border-radius: 50%;
+    &_high {
+      background-color: rgb(245, 77, 35);
+    }
+    &_low {
+      background-color: rgb(49, 207, 83);
+    }
+  }
+
+  &__footerBtn {
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #282828;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+
+    &_edit {
+      margin-right: 10px;
+      background-color: #7ed6f8;
+    }
+
+    &_delete {
+      background-color: #f8977e;
+
+      & > i::before {
+        margin-left: -2px;
+      }
+    }
+  }
+}
