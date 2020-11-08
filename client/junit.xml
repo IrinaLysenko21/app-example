@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="10" failures="0" time="6.727">
+  <testsuite name="NotesList component" errors="0" failures="0" skipped="0" timestamp="2020-11-08T15:33:02" time="3.229" tests="2">
+    <testcase classname="NotesList component should contain one note list wrapper" name="NotesList component should contain one note list wrapper" time="0.059">
+    </testcase>
+    <testcase classname="NotesList component should contain 2 notes" name="NotesList component should contain 2 notes" time="0.007">
+    </testcase>
+  </testsuite>
+  <testsuite name="App" errors="0" failures="0" skipped="0" timestamp="2020-11-08T15:33:01" time="3.589" tests="1">
+    <testcase classname="App should render correctly" name="App should render correctly" time="0.016">
+    </testcase>
+  </testsuite>
+  <testsuite name="Note component" errors="0" failures="0" skipped="0" timestamp="2020-11-08T15:33:05" time="0.616" tests="7">
+    <testcase classname="Note component Notepad Note component should contain one note wrapper" name="Note component Notepad Note component should contain one note wrapper" time="0.017">
+    </testcase>
+    <testcase classname="Note component Notepad Note component should contain two buttons" name="Note component Notepad Note component should contain two buttons" time="0.006">
+    </testcase>
+    <testcase classname="Note component Notepad Note component should receive an updateNote function prop if it&apos;s placed in the Notepad" name="Note component Notepad Note component should receive an updateNote function prop if it&apos;s placed in the Notepad" time="0.005">
+    </testcase>
+    <testcase classname="Note component Notepad Note component should call the updateNote function on click update note button" name="Note component Notepad Note component should call the updateNote function on click update note button" time="0.006">
+    </testcase>
+    <testcase classname="Note component Notepad Note component should call the updateNote function on click update note button" name="Note component Notepad Note component should call the updateNote function on click update note button" time="0.006">
+    </testcase>
+    <testcase classname="Note component Sidebar Note component should contain one button" name="Note component Sidebar Note component should contain one button" time="0.003">
+    </testcase>
+    <testcase classname="Note component Sidebar Note component shouldn&apos;t receive an updateNote function prop if it&apos;s placed in the Sidebar" name="Note component Sidebar Note component shouldn&apos;t receive an updateNote function prop if it&apos;s placed in the Sidebar" time="0.004">
+    </testcase>
+  </testsuite>
+</testsuites>

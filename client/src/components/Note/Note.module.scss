@@ -1,10 +1,4 @@
 .notesList {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-
   &__item {
     display: flex;
     flex-direction: column;
@@ -27,6 +21,7 @@
     }
   }
 }
+
 
 .note {
   &__footer {

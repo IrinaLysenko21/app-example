@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { CSSTransition } from 'react-transition-group';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import AddNoteForm from '../../components/AddNoteForm/AddNoteForm';
-import NotesList from '../../components/NotesList/NotesList';
+import NotesList from '../../components/NotesList/NoteList';
 import * as notepadSelectors from '../../redux/notepad/notepadSelectors';
 import { INote } from '../../types/noteType';
 import appearTransition from '../../assets/transitions/slide.module.scss';

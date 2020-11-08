@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { CSSTransition } from 'react-transition-group';
 import Sidebar from '../../components/Sidebar/Sidebar';
-import NotesList from '../../components/NotesList/NotesList';
+import NotesList from '../../components/NotesList/NoteList';
 import * as notepadSelectors from '../../redux/notepad/notepadSelectors';
 import appearTransition from '../../assets/transitions/slide.module.scss';
 // import s from './MainPage.module.scss';

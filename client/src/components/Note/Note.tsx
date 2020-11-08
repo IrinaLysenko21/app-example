@@ -1,35 +1,22 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
 import cn from 'classnames';
-import * as notepadOperations from '../../redux/notepad/notepadOperations';
 import { INote } from '../../types/noteType';
-import s from './NotesList.module.scss';
+import s from './Note.module.scss';
 
 type PropsType = {
-  inSidebar?: true;
-  notes: INote[];
+  inSidebar?: boolean;
+  note: INote;
   updateNote?: (id: string) => void;
+  deleteNote: (id: string) => void;
 };
 
-const NotesList = ({ notes, inSidebar, updateNote }: PropsType) => {
-  const dispatch = useDispatch();
-
-  const deleteNote = (id: string) => {
-    dispatch(notepadOperations.deleteNote(id));
-  };
+const Note = ({ note, inSidebar, updateNote, deleteNote }: PropsType) => {
 
   return (
-    <ul className={s.notesList}>
-      {notes.map((note: INote) => (
-        <li
-          className={cn(s.notesList__item, {
-            [s.notesList__item_small]: inSidebar,
-          })}
-          key={note.id}
-        >
+    <li className={cn(s.notesList__item, { [s.notesList__item_small]: inSidebar})}>
           <div>
-            <h3>{note.title}</h3>
-            <p>{note.body}</p>
+            <h3>{note?.title}</h3>
+            <p>{note?.body}</p>
           </div>
           <div className={s.note__footer}>
             <span
@@ -38,11 +25,12 @@ const NotesList = ({ notes, inSidebar, updateNote }: PropsType) => {
                 [s.note__priority_low]: note.priority === 2,
               })}
             >
-              {note.priority}
+              {note?.priority}
             </span>
             <div className={s.note__buttonsWrap}>
               {!inSidebar && updateNote && (
                 <button
+                id="update-note-btn"
                   className={cn(s.note__footerBtn, s.note__footerBtn_edit)}
                   type="button"
                   onClick={() => updateNote(note.id)}
@@ -52,6 +40,7 @@ const NotesList = ({ notes, inSidebar, updateNote }: PropsType) => {
               )}
 
               <button
+                id="delete-note-btn"
                 className={cn(s.note__footerBtn, s.note__footerBtn_delete)}
                 type="button"
                 onClick={() => deleteNote(note.id)}
@@ -61,9 +50,7 @@ const NotesList = ({ notes, inSidebar, updateNote }: PropsType) => {
             </div>
           </div>
         </li>
-      ))}
-    </ul>
   );
 };
 
-export default NotesList;
+export default Note;
